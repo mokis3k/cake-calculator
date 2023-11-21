@@ -51,11 +51,14 @@
 }
 
 .calculator__products {
-    width: 100%;
+    width: 60%;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     font-size: 20px;
+    border: 1px solid var(--color-beige);
+    border-radius: 10px;
+    padding: 5px 0;
 }
 
 .calculator__total {
