@@ -2,7 +2,7 @@
   --color-dark-brown: #3c281c;
   --color-beige: #fff5e8;
   --color-milk-brown: #8a5432;
-  --color-light-brown: #512b11;
+  --color-dark-beige: #d6c2a6;
   --color-black: #000000;
   --color-white: #ffffff;
   --txt-bold: 700;
@@ -45,10 +45,16 @@ section {
 
 body {
   background-color: var(--color-dark-brown);
+  color: var(--color-beige);
 }
 
 input::placeholder {
   color: var(--color-grey-text);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-beige);
 }
 
 .hidden {
