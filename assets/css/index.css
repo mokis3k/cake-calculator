@@ -8,6 +8,10 @@
 
 .calculator .container {
   padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .calculator__form__wrapper {
@@ -16,7 +20,7 @@
   max-width: 500px;
   margin: 0 auto;
   color: var(--color-white);
-
+  border-radius: 20px;
   padding: 30px;
 }
 
@@ -43,6 +47,7 @@
   font-size: 18px;
   padding: 8px;
   border: none;
+  border-radius: 7px;
 }
 
 .calculator__products {

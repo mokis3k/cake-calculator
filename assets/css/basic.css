@@ -57,6 +57,11 @@ a {
   color: var(--color-beige);
 }
 
+h1 {
+    font-size: 45px;
+    color: var(--color-milk-brown)
+}
+
 .hidden {
   display: none !important;
 }
