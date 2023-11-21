@@ -58,8 +58,21 @@ a {
 }
 
 h1 {
-    font-size: 45px;
-    color: var(--color-milk-brown)
+  font-size: 45px;
+  color: var(--color-milk-brown);
+}
+
+p {
+  color: var(--color-milk-brown);
+}
+
+tr,
+td {
+  border: 1px solid;
+}
+
+td {
+  padding: 5px;
 }
 
 .hidden {
