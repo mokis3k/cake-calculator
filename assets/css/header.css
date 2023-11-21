@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  background-color: var(--color-dark-brown);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Marck Script";
+  font-weight: var(--txt-regular);
+  font-size: 40px;
+}
+
+.header__logo {
+  color: var(--color-beige);
+}
