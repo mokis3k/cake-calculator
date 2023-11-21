@@ -1,0 +1,24 @@
+.footer {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--color-beige);
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    font-family: "Marck Script";
+    font-weight: var(--txt-regular);
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--color-beige);
+}
+
+.footer__rights {
+    font-size: 15px;
+}

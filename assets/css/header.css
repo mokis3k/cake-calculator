@@ -1,13 +1,40 @@
 .header {
   width: 100%;
-  background-color: var(--color-dark-brown);
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: "Marck Script";
-  font-weight: var(--txt-regular);
-  font-size: 40px;
+  color: var(--color-beige);
 }
 
 .header__logo {
+  font-family: "Marck Script";
+  font-weight: var(--txt-regular);
+  font-size: 40px;
+  text-decoration: none;
   color: var(--color-beige);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav__item {
+  color: var(--color-beige);
+  text-decoration: none;
+  transition: .1s linear;
+}
+
+.nav__item:active, .nav__item:hover {
+    color: var(--color-milk-brown);
+}
+
+.nav__item.nav__active {
+  text-decoration: underline;
+  font-weight: var(--txt-bold);
 }
