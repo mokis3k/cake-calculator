@@ -15,7 +15,7 @@
   .header .container {
     justify-content: space-between;
   }
-
+/* Подвинуть футер */
   /* footer.css */
   .footer {
     padding: 10px 0;
@@ -29,7 +29,7 @@
 
   /* index.css */
   .calculator .container {
-    padding: 60px 0;
+    padding-top: 60px;
   }
   .calculator h1 {
     font-size: 45px;
@@ -73,7 +73,7 @@
     display: none;
   }
   .header__logo {
-    font-size: 30px;
+    font-size: 35px;
   }
   .header .container {
     justify-content: center;
@@ -96,7 +96,7 @@
 
   /* index.css */
   .calculator .container {
-    padding: 50px 0;
+    padding-top: 50px;
   }
   .calculator__form__wrapper {
     max-width: 350px;
