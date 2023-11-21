@@ -1,32 +1,28 @@
 .header {
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .header__logo {
   font-family: "Marck Script";
   font-weight: var(--txt-regular);
-  font-size: 40px;
 }
 
 .header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .header .nav {
-  display: flex;
   gap: 25px;
 }
 
 .nav__item {
-  transition: .1s linear;
+  transition: 0.1s linear;
 }
 
-.nav__item:active, .nav__item:hover {
-    color: var(--color-milk-brown);
+.nav__item:active,
+.nav__item:hover {
+  color: var(--color-milk-brown);
 }
 
 .nav__item.nav__active {

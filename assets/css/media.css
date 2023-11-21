@@ -1,0 +1,124 @@
+@media (min-width: 602px) {
+  /* header.css */
+  .container {
+    max-width: var(--container-desktop);
+  }
+  .header {
+    padding: 10px 0;
+  }
+  .header .nav {
+    display: flex;
+  }
+  .header__logo {
+    font-size: 40px;
+  }
+  .header .container {
+    justify-content: space-between;
+  }
+
+  /* footer.css */
+  .footer {
+    padding: 10px 0;
+  }
+  .footer__logo {
+    font-size: 25px;
+  }
+  .footer__rights {
+    font-size: 15px;
+  }
+
+  /* index.css */
+  .calculator .container {
+    padding: 60px 0;
+  }
+  .calculator h1 {
+    font-size: 45px;
+  }
+  .calculator__form__wrapper {
+    max-width: 500px;
+    padding: 30px;
+  }
+  .calculator__form__wrapper label {
+    font-size: 20px;
+  }
+  .calculator__form {
+    gap: 20px;
+  }
+  .calculator__form__wrapper select,
+  .calculator__form__wrapper input {
+    height: 20px;
+  }
+  .calculator__products {
+    min-width: 250px;
+    font-size: 20px;
+  }
+  .calculator__form__button {
+    font-size: 18px;
+    padding: 8px;
+  }
+  .calculator__total {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 602px) {
+  /* header */
+  .container {
+    max-width: var(--container-mobile);
+  }
+  .header {
+    padding: 7px 0;
+  }
+  .header .nav {
+    display: none;
+  }
+  .header__logo {
+    font-size: 30px;
+  }
+  .header .container {
+    justify-content: center;
+  }
+
+  /* footer.css */
+  .footer {
+    padding: 8px 0;
+  }
+  .footer .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer__logo {
+    font-size: 20px;
+  }
+  .footer__rights {
+    font-size: 10px;
+  }
+
+  /* index.css */
+  .calculator .container {
+    padding: 50px 0;
+  }
+  .calculator__form__wrapper {
+    max-width: 350px;
+    padding: 20px 15px;
+  }
+  .calculator h1 {
+    font-size: 30px;
+  }
+  .calculator__form__wrapper label {
+    font-size: 15px;
+  }
+  .calculator__form {
+    gap: 15px;
+  }
+  .calculator__products {
+    min-width: 200px;
+    font-size: 15px;
+  }
+  .calculator__form__button {
+    font-size: 13px;
+  }
+  .calculator__total {
+    font-size: 20px;
+  }
+}
