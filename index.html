@@ -12,8 +12,6 @@
     <title>Cake Calculator</title>
 </head>
 
-<!-- Style a from button -->
-
 <body>
     <header class="header">
         <div class="container">
@@ -23,6 +21,15 @@
                 <a class="nav__item" href="./pages/products.html">Мої продукти</a>
                 <a class="nav__item" href="./pages/contacts.html">Контакти</a>
             </nav>
+            <input class="burger__check" type="checkbox">
+            <div class="burger__menu" id="burgerMenu">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="popup__nav">
+                <a class="nav__item nav__active" href="./index.html">Калькулятор</a>
+                <a class="nav__item" href="./pages/products.html">Мої продукти</a>
+                <a class="nav__item" href="./pages/contacts.html">Контакти</a>
+            </div>
         </div>
     </header>
     <section class="calculator">
@@ -40,11 +47,6 @@
                         <span></span>
                     </label>
                     <div class="calculator__products">
-                        <!-- <div class="calculator__product">
-                            <span>Product</span>
-                            <span>Amount</span>
-                        </div>
-                        <hr>
                         <div class="calculator__product">
                             <span>Product</span>
                             <span>Amount</span>
@@ -68,7 +70,12 @@
                         <div class="calculator__product">
                             <span>Product</span>
                             <span>Amount</span>
-                        </div> -->
+                        </div>
+                        <hr>
+                        <div class="calculator__product">
+                            <span>Product</span>
+                            <span>Amount</span>
+                        </div>
                     </div>
                     <button class="calculator__form__button">Підрахувати вартість</button>
                     <div class="calculator__total">
@@ -84,6 +91,8 @@
             <span class="footer__rights">© 2024 Viktoria Tafiy. All rights reserved</span>
         </div>
     </footer>
+
+    <script src="./script/burgerMenu.js"></script>
 </body>
 
 </html>

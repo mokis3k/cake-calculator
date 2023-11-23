@@ -1,5 +1,5 @@
 @media (min-width: 602px) {
-  /* header.css */
+  /*--------------------header.css-------------------- */
   .container {
     max-width: var(--container-desktop);
   }
@@ -15,8 +15,14 @@
   .header .container {
     justify-content: space-between;
   }
-/* Подвинуть футер */
-  /* footer.css */
+  .burger__menu {
+    display: none;
+  }
+  .header .popup__nav {
+    display: none;
+  }
+
+  /*--------------------footer.css-------------------- */
   .footer {
     padding: 10px 0;
   }
@@ -27,7 +33,7 @@
     font-size: 15px;
   }
 
-  /* index.css */
+  /*--------------------index.css-------------------- */
   .calculator .container {
     padding-top: 60px;
   }
@@ -61,13 +67,39 @@
   }
 }
 
+/*--------------------products.css-------------------- */
+.my__products h1 {
+  font-size: 45px;
+}
+.my__products__table {
+  font-size: 20px;
+  width: fit-content;
+}
+.my__products__table button {
+  font-size: 15px;
+  padding: 10px 0;
+}
+
+/*--------------------contacts.css-------------------- */
+.contacts h1 {
+  font-size: 45px;
+}
+.contacts .container {
+  padding: 60px 0;
+  font-size: 16px;
+}
+
+
 @media (max-width: 602px) {
-  /* header */
+  /*--------------------header.css-------------------- */
   .container {
     max-width: var(--container-mobile);
   }
   .header {
     padding: 7px 0;
+  }
+  .burger__menu ~ .popup__nav {
+    display: none;
   }
   .header .nav {
     display: none;
@@ -78,8 +110,20 @@
   .header .container {
     justify-content: center;
   }
+  .burger__menu {
+    display: flex;
+    position: absolute;
+    right: 25px;
+  }
+  .burger__check {
+    position: absolute;
+    right: 25px;
+  }
+  .burger__menu.active ~ .popup__nav {
+    display: flex;
+  }
 
-  /* footer.css */
+  /*--------------------footer.css-------------------- */
   .footer {
     padding: 8px 0;
   }
@@ -94,7 +138,7 @@
     font-size: 10px;
   }
 
-  /* index.css */
+  /*--------------------index.css-------------------- */
   .calculator .container {
     padding-top: 50px;
   }
@@ -103,7 +147,7 @@
     padding: 20px 15px;
   }
   .calculator h1 {
-    font-size: 30px;
+    font-size: 24px;
   }
   .calculator__form__wrapper label {
     font-size: 15px;
@@ -121,4 +165,30 @@
   .calculator__total {
     font-size: 20px;
   }
+}
+
+/*--------------------products.css-------------------- */
+.my__products .container {
+  padding-top: 50px;
+}
+.my__products h1 {
+  font-size: 24px;
+}
+.my__products__table {
+  font-size: 13px;
+  width: fit-content;
+  max-width: 350px;
+}
+.my__products__table button {
+  font-size: 13px;
+  padding: 8px 0;
+}
+
+/*--------------------contacts.css-------------------- */
+.contacts h1 {
+  font-size: 24px;
+}
+.contacts .container {
+  padding: 50px 15px 60px 15px;
+  font-size: 16px;
 }
