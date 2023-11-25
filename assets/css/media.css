@@ -1,4 +1,4 @@
-@media (min-width: 602px) {
+@media (min-width: 670px) {
   /*--------------------header.css-------------------- */
   .container {
     max-width: var(--container-desktop);
@@ -14,6 +14,7 @@
   }
   .header .container {
     justify-content: space-between;
+    padding: 0 35px;
   }
   .burger__menu {
     display: none;
@@ -21,10 +22,16 @@
   .header .popup__nav {
     display: none;
   }
+  .burger__check {
+    display: none;
+  }
 
   /*--------------------footer.css-------------------- */
   .footer {
     padding: 10px 0;
+  }
+  .footer .container {
+    padding: 0 35px;
   }
   .footer__logo {
     font-size: 25px;
@@ -58,39 +65,54 @@
     min-width: 250px;
     font-size: 20px;
   }
-  .calculator__form__button {
+  .calculator__button {
     font-size: 18px;
     padding: 8px;
   }
   .calculator__total {
     font-size: 30px;
   }
+  /*--------------------products.css-------------------- */
+  .my__products h1 {
+    font-size: 45px;
+  }
+  .my__products__table {
+    font-size: 20px;
+    width: fit-content;
+  }
+  .my__products__table button {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .my__products__form__wrapper {
+    max-width: 500px;
+    padding: 30px;
+  }
+  .my__products__form__wrapper label {
+    font-size: 20px;
+  }
+  .my__products__form {
+    gap: 20px;
+  }
+  .my__products__form__wrapper select,
+  .my__products__form__wrapper input {
+    height: 20px;
+  }
+  .my__products__form__button {
+    font-size: 18px;
+  }
+
+  /*--------------------contacts.css-------------------- */
+  .contacts h1 {
+    font-size: 45px;
+  }
+  .contacts .container {
+    padding: 60px 0;
+    font-size: 16px;
+  }
 }
 
-/*--------------------products.css-------------------- */
-.my__products h1 {
-  font-size: 45px;
-}
-.my__products__table {
-  font-size: 20px;
-  width: fit-content;
-}
-.my__products__table button {
-  font-size: 15px;
-  padding: 10px 0;
-}
-
-/*--------------------contacts.css-------------------- */
-.contacts h1 {
-  font-size: 45px;
-}
-.contacts .container {
-  padding: 60px 0;
-  font-size: 16px;
-}
-
-
-@media (max-width: 602px) {
+@media (max-width: 670px) {
   /*--------------------header.css-------------------- */
   .container {
     max-width: var(--container-mobile);
@@ -122,6 +144,9 @@
   .burger__menu.active ~ .popup__nav {
     display: flex;
   }
+  .burger__check {
+    display: initial;
+  }
 
   /*--------------------footer.css-------------------- */
   .footer {
@@ -142,12 +167,12 @@
   .calculator .container {
     padding-top: 50px;
   }
+  .calculator h1 {
+    font-size: 24px;
+  }
   .calculator__form__wrapper {
     max-width: 350px;
     padding: 20px 15px;
-  }
-  .calculator h1 {
-    font-size: 24px;
   }
   .calculator__form__wrapper label {
     font-size: 15px;
@@ -159,36 +184,48 @@
     min-width: 200px;
     font-size: 15px;
   }
-  .calculator__form__button {
+  .calculator__button {
     font-size: 13px;
   }
   .calculator__total {
     font-size: 20px;
   }
-}
+  /*--------------------products.css-------------------- */
+  .my__products .container {
+    padding-top: 50px;
+  }
+  .my__products h1 {
+    font-size: 24px;
+  }
+  .my__products__table {
+    font-size: 13px;
+    width: fit-content;
+    max-width: 350px;
+  }
+  .my__products__table button {
+    font-size: 13px;
+    padding: 8px 0;
+  }
+  .my__products__form__wrapper {
+    max-width: 350px;
+    padding: 20px 15px;
+  }
+  .my__products__form__wrapper label {
+    font-size: 15px;
+  }
+  .my__products__form {
+    gap: 15px;
+  }
+  .my__products__form__button {
+    font-size: 15px;
+  }
 
-/*--------------------products.css-------------------- */
-.my__products .container {
-  padding-top: 50px;
-}
-.my__products h1 {
-  font-size: 24px;
-}
-.my__products__table {
-  font-size: 13px;
-  width: fit-content;
-  max-width: 350px;
-}
-.my__products__table button {
-  font-size: 13px;
-  padding: 8px 0;
-}
-
-/*--------------------contacts.css-------------------- */
-.contacts h1 {
-  font-size: 24px;
-}
-.contacts .container {
-  padding: 50px 15px 60px 15px;
-  font-size: 16px;
+  /*--------------------contacts.css-------------------- */
+  .contacts h1 {
+    font-size: 24px;
+  }
+  .contacts .container {
+    padding: 50px 15px 60px 15px;
+    font-size: 16px;
+  }
 }

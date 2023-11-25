@@ -26,7 +26,7 @@
 .calculator__form__wrapper select,
 .calculator__form__wrapper input {
   width: 100px;
-  padding: 2px;
+  padding: 0 2px;
 }
 
 .calculator__products {
@@ -43,7 +43,7 @@
   margin: 5px 0;
 }
 
-.calculator__form__button {
+.calculator__button {
   color: var(--color-beige);
   background-color: var(--color-milk-brown);
   padding: 8px;
@@ -52,8 +52,8 @@
   transition: 0.1s linear;
 }
 
-.calculator__form__button:hover,
-.calculator__form__button:active {
+.calculator__button:hover,
+.calculator__button:active {
   color: var(--color-milk-brown);
   background-color: var(--color-beige);
 }

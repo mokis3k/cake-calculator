@@ -18,7 +18,7 @@
             <a class="header__logo" href="../index.html">Viktoria Tafiy</a>
             <nav class="nav">
                 <a class="nav__item" href="../index.html">Калькулятор</a>
-                <a class="nav__item nav__active" href="./products.html">Мої продукти</a>
+                <a class="nav__item nav__active" href="./products.html">Мої інгрідієнти</a>
                 <a class="nav__item" href="./contacts.html">Контакти</a>
             </nav>
             <input class="burger__check" type="checkbox">
@@ -27,42 +27,31 @@
             </div>
             <div class="popup__nav">
                 <a class="nav__item" href="../index.html">Калькулятор</a>
-                <a class="nav__item nav__active" href="./products.html">Мої продукти</a>
+                <a class="nav__item nav__active" href="./products.html">Мої інгрідієнти</a>
                 <a class="nav__item" href="./contacts.html">Контакти</a>
             </div>
         </div>
     </header>
     <section class="my__products">
         <div class="container">
-            <h1>Мої продукти</h1>
+            <h1>Мої інгрідієнти</h1>
+            <div class="my__products__form__wrapper">
+                <form class="my__products__form" id="addProductForm">
+                    <label>Назва інгрідієнту: <input name="name" type="text"></label>
+                    <label>Одиниця виміру:
+                        <select name="type">
+                            <option disabled selected>Оберіть</option>
+                            <option value="літр">літр</option>
+                            <option value="грам">грам</option>
+                            <option value="штука">штука</option>
+                        </select>
+                    </label>
+                    <label>Ціна: <input name="price" type="tel"><span> грн</span></label>
+                    <button class="my__products__form__button">Додати інгрідієнт до таблиці</button>
+                </form>
+            </div>
             <div class="my__products__wrapper">
-                <table class="my__products__table">
-                    <tbody>
-                        <tr>
-                            <td>Продукт</td>
-                            <td>Одиниці виміру</td>
-                            <td>Ціна</td>
-                            <td>Видалення</td>
-                        </tr>
-                        <tr>
-                            <td>Яйце</td>
-                            <td>шт.</td>
-                            <td>10 грн</td>
-                            <td><button>Видалити</button></td>
-                        </tr>
-                        <tr>
-                            <td>Молоко</td>
-                            <td>літр</td>
-                            <td>50 грн</td>
-                            <td><button>Видалити</button></td>
-                        </tr>
-                        <tr>
-                            <td>Борошно</td>
-                            <td>кілограм</td>
-                            <td>20 грн</td>
-                            <td><button>Видалити</button></td>
-                        </tr>
-                    </tbody>
+                <table class="my__products__table" id="productsTable">
                 </table>
             </div>
         </div>
@@ -74,6 +63,7 @@
         </div>
     </footer>
     <script src="../script/burgerMenu.js"></script>
+    <script src="../script/main.js"></script>
 </body>
 
 </html>
