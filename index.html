@@ -36,51 +36,23 @@
         <div class="container">
             <h1>Калькулятор</h1>
             <div class="calculator__form__wrapper">
-                <form class="calculator__form">
+                <form class="calculator__form" id="calculatorForm">
                     <label>
                         <span>Оберіть інгрідієнт:</span>
-                        <select></select>
+                        <select name="name" id="productsSelect">
+                            <option disabled selected></option>
+                        </select>
                     </label>
                     <label>
                         Введіть кількість:
-                        <input type="tel">
-                        <span></span>
+                        <input type="tel" name="amount">
+                        <span id="productType"></span>
                     </label>
-                    <button class="calculator__button">Додати інгрідієнт</button>
-                    <div class="calculator__products">
-                        <div class="calculator__product">
-                            <span>Product</span>
-                            <span>Amount</span>
-                        </div>
-                        <hr>
-                        <div class="calculator__product">
-                            <span>Product</span>
-                            <span>Amount</span>
-                        </div>
-                        <hr>
-                        <div class="calculator__product">
-                            <span>Product</span>
-                            <span>Amount</span>
-                        </div>
-                        <hr>
-                        <div class="calculator__product">
-                            <span>Product</span>
-                            <span>Amount</span>
-                        </div>
-                        <hr>
-                        <div class="calculator__product">
-                            <span>Product</span>
-                            <span>Amount</span>
-                        </div>
-                        <hr>
-                        <div class="calculator__product">
-                            <span>Product</span>
-                            <span>Amount</span>
-                        </div>
-                    </div>
-                    <button class="calculator__button">Підрахувати вартість</button>
+                    <button class="calculator__button" type="submit">Додати інгрідієнт</button>
+                    <div id="calculatorProductsWrapper"></div>
+                    <button class="calculator__button" id="calculateButton">Підрахувати вартість</button>
                     <div class="calculator__total">
-                        <span>Всього:&nbsp</span><span>00.0 грн</span>
+                        <span>Всього:&nbsp</span><span id="total">00.0 грн</span>
                     </div>
                 </form>
             </div>
@@ -94,6 +66,7 @@
     </footer>
 
     <script src="./script/burgerMenu.js"></script>
+    <script src="./script/calculator.js"></script>
 </body>
 
 </html>
