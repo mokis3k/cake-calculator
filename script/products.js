@@ -62,10 +62,8 @@ const createTr = (obj) => {
 const deleteButtonHandler = (e, obj) => {
   parentTr = e.target.closest(`tr`);
   parentTr.remove();
-  console.log(obj);
-  console.log(productsList);
   productsList = productsList.filter((product) => product !== obj);
-  console.log(productsList);
+  productsNames = productsNames.filter(product => product !== obj.name)
   localStorage.setItem("products", JSON.stringify(productsList));
 };
 
@@ -88,8 +86,6 @@ addProductForm.addEventListener("submit", (e) => {
   }
 
   e.target.reset();
-
-  console.log(productsNames);
 });
 
 if (!productsList) productsList = [];

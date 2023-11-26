@@ -42,11 +42,13 @@
                         <select name="type">
                             <option disabled selected>Оберіть</option>
                             <option value="літр">літр</option>
+                            <option value="мілілітр">мілілітр</option>
                             <option value="грам">грам</option>
+                            <option value="кілограм">кілограм</option>
                             <option value="штука">штука</option>
                         </select>
                     </label>
-                    <label>Ціна: <input name="price" type="tel"><span> грн</span></label>
+                    <label>Ціна: <input name="price" type="number"><span> грн</span></label>
                     <button class="my__products__form__button">Додати інгрідієнт до таблиці</button>
                     <span class="exists__alert" id="productExists">*Такий інгрідієнт не може бути додан або вже
                         додан.</span>

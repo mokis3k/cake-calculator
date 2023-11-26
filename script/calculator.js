@@ -75,6 +75,12 @@ const addType = (e) => {
         case "грам":
           productType.innerHTML = "гр.";
           break;
+        case "кілограм":
+          productType.innerHTML = "кг.";
+          break;
+        case "мілілітр":
+          productType.innerHTML = "мл.";
+          break;
       }
     }
   });
@@ -100,12 +106,12 @@ calculateButton.addEventListener("click", (e) => {
   });
 });
 
-clearButton.addEventListener("click", e => {
-    calculatorProducts.innerHTML = "";
-    productsNames = [];
-    calculateProductList = [];
-    total.innerHTML = "00.0 грн"
-})
+clearButton.addEventListener("click", (e) => {
+  calculatorProducts.innerHTML = "";
+  productsNames = [];
+  calculateProductList = [];
+  total.innerHTML = "00.0 грн";
+});
 
 if (!productsList) productsList = [];
 getProductsNames();
