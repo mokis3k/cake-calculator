@@ -1,7 +1,9 @@
 const addProductForm = document.querySelector("#addProductForm");
 const productsTable = document.querySelector("#productsTable");
+const productExists = document.querySelector("#productExists");
 const THEADList = ["Інгрідієнт", "Одиниці виміру", "Ціна", "Видалення"];
 let productsList = JSON.parse(localStorage.getItem("products"));
+let productsNames = [];
 
 const renderTable = () => {
   const thead = renderThead();
@@ -39,6 +41,7 @@ const addProduct = (product) => {
 };
 
 const createTr = (obj) => {
+  productsNames.push(obj.name);
   let tr = document.createElement("tr");
   Object.keys(obj).map((key) => {
     let td = document.createElement("td");
@@ -59,21 +62,34 @@ const createTr = (obj) => {
 const deleteButtonHandler = (e, obj) => {
   parentTr = e.target.closest(`tr`);
   parentTr.remove();
-  console.log(obj)
-  console.log(productsList)
+  console.log(obj);
+  console.log(productsList);
   productsList = productsList.filter((product) => product !== obj);
-  console.log(productsList)
+  console.log(productsList);
   localStorage.setItem("products", JSON.stringify(productsList));
 };
 
 addProductForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  productExists.classList.remove("active")
 
   let newProduct = new FormData(e.target);
   newProduct = Object.fromEntries(newProduct.entries());
 
-  addProduct(newProduct);
+  if (
+    productsNames.includes(newProduct.name) ||
+    !newProduct.name ||
+    !newProduct.type ||
+    !newProduct.price
+  ) {
+    productExists.classList.add("active");
+  } else {
+    addProduct(newProduct);
+  }
+
   e.target.reset();
+
+  console.log(productsNames);
 });
 
 if (!productsList) productsList = [];

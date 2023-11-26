@@ -49,12 +49,15 @@
                         <span id="productType"></span>
                     </label>
                     <button class="calculator__button" type="submit">Додати інгрідієнт</button>
+                    <span class="exists__alert" id="productExists">*Такий інгрідієнт не може бути додан або вже
+                        додан.</span>
                     <div id="calculatorProductsWrapper"></div>
-                    <button class="calculator__button" id="calculateButton">Підрахувати вартість</button>
-                    <div class="calculator__total">
-                        <span>Всього:&nbsp</span><span id="total">00.0 грн</span>
-                    </div>
                 </form>
+                <div class="calculator__buttons__wrapper"><button class="calculator__button" id="calculateButton">Підрахувати вартість</button><button
+                        class="calculator__button" id="clearButton">Очистити список</button></div>
+                <div class="calculator__total">
+                    <span>Всього:&nbsp</span><span id="total">00.0 грн</span>
+                </div>
             </div>
         </div>
     </section>

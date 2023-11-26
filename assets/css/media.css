@@ -54,9 +54,6 @@
   .calculator__form__wrapper label {
     font-size: 20px;
   }
-  .calculator__form {
-    gap: 20px;
-  }
   .calculator__form__wrapper select,
   .calculator__form__wrapper input {
     height: 20px;
@@ -176,9 +173,6 @@
   }
   .calculator__form__wrapper label {
     font-size: 15px;
-  }
-  .calculator__form {
-    gap: 15px;
   }
   .calculator__products {
     min-width: 200px;

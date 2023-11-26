@@ -71,7 +71,8 @@ th {
   border: 1px solid;
 }
 
-td, th {
+td,
+th {
   padding: 5px;
 }
 
@@ -82,4 +83,15 @@ hr {
 
 .hidden {
   display: none !important;
+}
+
+.exists__alert {
+  display: none;
+  font-size: 14px;
+  text-align: center;
+}
+
+.exists__alert.active {
+  display: block;
+  color: red;
 }

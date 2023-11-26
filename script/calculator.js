@@ -5,26 +5,31 @@ let calculatorProducts = document.querySelector("#calculatorProducts");
 const calculatorProductsWrapper = document.querySelector(
   "#calculatorProductsWrapper"
 );
+const productExists = document.querySelector("#productExists");
 const productsSelect = document.querySelector("#productsSelect");
+const clearButton = document.querySelector("#clearButton");
 const total = document.querySelector("#total");
 let calculateProductList = [];
+let productsNames = [];
 let productsList = JSON.parse(localStorage.getItem("products"));
-console.log(productsList);
 
 calculatorForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  productExists.classList.remove("active");
+
   let product = new FormData(e.target);
   product = Object.fromEntries(product.entries());
-  console.log(product); //{name: 'Молоко', quantity: '10'}
 
-  if (calculatorProducts) {
-    renderProduct(product);
+  if (!calculatorProducts) createCalculatorProducts();
+
+  if (
+    productsNames.includes(product.name) ||
+    !product.name ||
+    !product.amount
+  ) {
+    productExists.classList.add("active");
   } else {
-    calculatorProducts = document.createElement("div");
-    calculatorProducts.setAttribute("id", "calculatorProducts");
-    calculatorProducts.setAttribute("class", "calculator__products");
-    calculatorProductsWrapper.append(calculatorProducts);
     renderProduct(product);
   }
 
@@ -35,8 +40,17 @@ productsSelect.addEventListener("change", (e) => {
   addType(e);
 });
 
+const createCalculatorProducts = () => {
+  calculatorProducts = document.createElement("div");
+  calculatorProducts.setAttribute("id", "calculatorProducts");
+  calculatorProducts.setAttribute("class", "calculator__products");
+  calculatorProductsWrapper.append(calculatorProducts);
+};
+
 const renderProduct = (product) => {
-  const hr = document.createElement("hr");
+  productsNames.push(product.name);
+  calculateProductList.push(product);
+  console.log(calculateProductList);
   const productDiv = document.createElement("div");
   productDiv.classList.add("calculator__product");
   const productName = document.createElement("span");
@@ -73,6 +87,25 @@ const getProductsNames = () => {
     productsSelect.append(option);
   });
 };
+
+calculateButton.addEventListener("click", (e) => {
+  let totalCost = 0;
+  calculateProductList.map((obj) => {
+    productsList.map((objInner) => {
+      if (obj.name === objInner.name) {
+        totalCost += +obj.amount * +objInner.price;
+      }
+    });
+    total.innerHTML = `${totalCost} грн`;
+  });
+});
+
+clearButton.addEventListener("click", e => {
+    calculatorProducts.innerHTML = "";
+    productsNames = [];
+    calculateProductList = [];
+    total.innerHTML = "00.0 грн"
+})
 
 if (!productsList) productsList = [];
 getProductsNames();

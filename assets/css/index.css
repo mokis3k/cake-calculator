@@ -11,6 +11,10 @@
 }
 
 .calculator__form__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   background-color: var(--color-dark-beige);
   width: 100%;
   color: var(--color-white);
@@ -21,6 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
 }
 
 .calculator__form__wrapper select,
@@ -56,6 +61,11 @@
 .calculator__button:active {
   color: var(--color-milk-brown);
   background-color: var(--color-beige);
+}
+
+.calculator__buttons__wrapper {
+  display: flex;
+  gap: 5px;
 }
 
 .calculator__total {
