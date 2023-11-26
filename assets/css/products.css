@@ -63,6 +63,7 @@
   border: 1px solid var(--color-milk-brown);
   border-radius: 7px;
   transition: 0.1s linear;
+  color: white;
 }
 
 .my__products__form__button:hover,
