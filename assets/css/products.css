@@ -65,9 +65,3 @@
   transition: 0.1s linear;
   color: white;
 }
-
-.my__products__form__button:hover,
-.my__products__form__button:active {
-  color: var(--color-milk-brown);
-  background-color: var(--color-beige);
-}

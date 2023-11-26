@@ -66,6 +66,10 @@
     font-size: 18px;
     padding: 8px;
   }
+  .calculator__button:hover {
+    color: var(--color-milk-brown);
+    background-color: var(--color-beige);
+  }
   .calculator__total {
     font-size: 30px;
   }
@@ -80,6 +84,10 @@
   .my__products__table button {
     font-size: 15px;
     padding: 10px 0;
+  }
+  .my__products__table button:hover {
+    background-color: var(--color-beige);
+    color: var(--color-milk-brown);
   }
   .my__products__form__wrapper {
     max-width: 500px;
@@ -97,6 +105,10 @@
   }
   .my__products__form__button {
     font-size: 18px;
+  }
+  .my__products__form__button:hover {
+    color: var(--color-milk-brown);
+    background-color: var(--color-beige);
   }
 
   /*--------------------contacts.css-------------------- */
@@ -181,6 +193,10 @@
   .calculator__button {
     font-size: 13px;
   }
+  .calculator__button:active {
+    color: var(--color-milk-brown);
+    background-color: var(--color-beige);
+  }
   .calculator__total {
     font-size: 20px;
   }
@@ -200,6 +216,10 @@
     font-size: 13px;
     padding: 8px 0;
   }
+  .my__products__table button:active {
+    background-color: var(--color-beige);
+    color: var(--color-milk-brown);
+  }
   .my__products__form__wrapper {
     max-width: 350px;
     padding: 20px 15px;
@@ -212,6 +232,10 @@
   }
   .my__products__form__button {
     font-size: 15px;
+  }
+  .my__products__form__button:active {
+    color: var(--color-milk-brown);
+    background-color: var(--color-beige);
   }
 
   /*--------------------contacts.css-------------------- */
