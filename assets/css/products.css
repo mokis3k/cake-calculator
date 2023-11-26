@@ -34,6 +34,10 @@
   color: var(--color-milk-brown);
 }
 
+.my__products__table td:nth-child(3) {
+  text-align: center;
+}
+
 .my__products__form__wrapper {
   background-color: var(--color-dark-beige);
   width: 100%;

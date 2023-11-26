@@ -1,7 +1,7 @@
 const addProductForm = document.querySelector("#addProductForm");
 const productsTable = document.querySelector("#productsTable");
 const productExists = document.querySelector("#productExists");
-const THEADList = ["Інгрідієнт", "Одиниці виміру", "Ціна", "Видалення"];
+const THEADList = ["Інгрідієнт", "Одиниці виміру", "Ціна (грн)", "Видалення"];
 let productsList = JSON.parse(localStorage.getItem("products"));
 let productsNames = [];
 
@@ -73,6 +73,7 @@ addProductForm.addEventListener("submit", (e) => {
 
   let newProduct = new FormData(e.target);
   newProduct = Object.fromEntries(newProduct.entries());
+  newProduct.price = +(newProduct.price.replaceAll(',', '.'));
 
   if (
     productsNames.includes(newProduct.name) ||

@@ -20,6 +20,7 @@ calculatorForm.addEventListener("submit", (e) => {
 
   let product = new FormData(e.target);
   product = Object.fromEntries(product.entries());
+  product.amount = +(product.amount.replaceAll(',', '.'));
 
   if (!calculatorProducts) createCalculatorProducts();
 
@@ -50,7 +51,6 @@ const createCalculatorProducts = () => {
 const renderProduct = (product) => {
   productsNames.push(product.name);
   calculateProductList.push(product);
-  console.log(calculateProductList);
   const productDiv = document.createElement("div");
   productDiv.classList.add("calculator__product");
   const productName = document.createElement("span");
